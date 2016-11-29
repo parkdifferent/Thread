@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+    //alert("hello world");
+    'use strict';
+    //var m = new Map();
+    //var s = new Set();
+    //alert('你的浏览器支持Map和Set！');
+
+    //var m = new Map([['Michael', 95], ['Bob', 75], ['Tracy', 85]]);
+    //alert(m.get('Michael')); // 95
+
+   // var a = [1,2,3];
+   // for( var v of a ) {
+   // }
+   // alert('你的浏览器支持for ... of');
+
+
+    /*var a = ['A', 'B', 'C'];
+    var s = new Set(['A', 'B', 'C']);
+    var m = new Map([[1, 'x'], [2, 'y'], [3, 'z']]);
+    for (var x of a) { // 遍历Array
+        alert(x);
+    }
+    for (var x of s) { // 遍历Set
+        alert(x);
+    }
+    for (var x of m) { // 遍历Map
+        alert(x[0] + '=' + x[1]);
+    }*/
+
+    /*var a = ['A', 'B', 'C'];
+    a.forEach(function (element, index, array) {
+        // element: 指向当前元素的值
+        // index: 指向当前索引
+        // array: 指向Array对象本身
+        alert(element+" "+index);
+    });*/
+
+    /*var s = new Set(['A', 'B', 'C']);
+    s.forEach(function (element, sameElement, set) {
+        alert(element + " "+sameElement);
+    });*/
+
+   /* var m = new Map([[1, 'x'], [2, 'y'], [3, 'z']]);
+    m.forEach(function (value, key, map) {
+        alert(value + " "+key);
+    });*/
+
+    /*function foo(x) {
+        alert(x); // 10
+        for (var i=0; i<arguments.length; i++) {
+            alert(arguments[i]); // 10, 20, 30
+        }
+    }
+    foo(10, 20, 30);*/
+
+    /*function abs() {
+        if (arguments.length === 0) {
+            return 0;
+        }
+        var x = arguments[0];
+        return x >= 0 ? x : -x;
+    }
+
+    alert(abs()); // 0
+    alert(10); // 10
+    alert(9); // 9*/
+
+    /*function foo(a, b, ...rest) {
+        console.log('a = ' + a);
+        console.log('b = ' + b);
+        console.log(rest);
+    }
+
+    foo(1, 2, 3, 4, 5);
+    // 结果:
+    // a = 1
+    // b = 2
+    // Array [ 3, 4, 5 ]
+
+    foo(1);
+    // 结果:
+    // a = 1
+    // b = undefined
+    // Array []*/
+
+    /*function area_of_circle(r, pi) {
+        if (arguments.length == 1) {
+            return 3.14 * r * r;
+        }
+        if (arguments.length == 2) {
+            return pi * r * r;
+        }
+        return 0;
+    }
+
+        // 测试:
+        if (area_of_circle(2) === 12.56 && area_of_circle(2, 3.1416) === 12.5664) {
+            alert('测试通过');
+        } else {
+            alert('测试失败');
+        }*/
+
+    // 唯一的全局变量MYAPP:
+    /*var MYAPP = {};
+
+    // 其他变量:
+    MYAPP.name = 'myapp';
+    MYAPP.version = 1.0;
+
+    // 其他函数:
+    MYAPP.foo = function () {
+        return 'foo';
+    };
+
+    console.log(MYAPP);
+    console.log(window);*/
+
+    /*var xiaoming = {
+        name: '小明',
+        birth: 1990,
+        age: function () {
+            var y = new Date().getFullYear();
+            return y - this.birth;
+        }
+    };
+
+    console.log(xiaoming.age);// function xiaoming.age()
+    console.log(xiaoming.age()); // 今年调用是25,明年调用就变成26了
+
+    var fieldArray = [];
+
+    fieldArray.push('bizcomid');
+    fieldArray.push('viewid');
+    alert(fieldArray);
+    console.log(fieldArray);
+*/
+
+
+    /*var xiaoming = {
+        name: '小明',
+        birth: 1990,
+        age: function () {
+            var y = new Date().getFullYear();
+            return y - this.birth;
+        }
+    };
+
+    var fn = xiaoming.age;
+    fn(); // Uncaught TypeError: Cannot read property 'birth' of undefined*/
+
+    /*var count = 0;
+    var oldParseInt = parseInt; // 保存原函数
+
+    window.parseInt = function () {
+        count += 1;
+        return oldParseInt.apply(null, arguments); // 调用原函数
+    };
+
+    // 测试:
+    parseInt('10');
+    parseInt('20');
+    parseInt('30');
+    alert(count); // 3*/
+
+    /*var str = '';
+    str += '\'hello\'';
+    str += ',';
+    str += '\'world\'';
+    alert(str);*/
+
+   /* var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    arr.map(String); // ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+    console.log(arr);*/
+
+    /*function product(arr) {
+        return arr.reduce(function (x,y) {
+            return x * y;
+        });
+    }
+    // 测试:
+    if (product([1, 2, 3, 4]) === 24 && product([0, 1, 2]) === 0 && product([99, 88, 77, 66]) === 44274384) {
+        alert('测试通过!');
+    }
+    else {
+        alert('测试失败!');
+    }*/
+
+    /*var map = Array.prototype.map;
+    var a = map.call('Hello World', function(x) { return x.charCodeAt(0); });
+    // a now equals [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
+    console.log(a);*/
+
+   /* var arr = ['1', '2', '3'];
+    var map = Array.prototype.map;
+    var r = map.call(arr, function (x) {
+        return parseInt(x);
+    });
+    console.log(r);*/
+
+    /*function get_primes(arr) {
+        return arr.filter(function (x) {
+            for(var i = 2;i<= Math.sqrt(x) ;i++) {
+                if(x % i == 0) {
+                    return false;
+                }
+                return x!=1;
+            }
+        })
+    }
+
+    // 测试:
+    var
+            x,
+            r,
+            arr = [];
+    for (x = 1; x < 100; x++) {
+        arr.push(x);
+    }
+    r = get_primes(arr);
+    if (r.toString() === [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97].toString()) {
+        alert('测试通过!');
+    } else {
+        alert('测试失败: ' + r.toString());
+    }*/
+
+    /*function count() {
+        var arr = [];
+        for (var i=1; i<=3; i++) {
+            arr.push((function (n) {
+                return function () {
+                    return n * n;
+                }
+            })(i));
+        }
+        return arr;
+    }
+
+    var results = count();
+    var f1 = results[0];
+    var f2 = results[1];
+    var f3 = results[2];
+
+    f1(); // 1
+    f2(); // 4
+    f3(); // 9*/
+
+    /*var xiaoming = {
+        name: '小明',
+        age: 14,
+        gender: true,
+        height: 1.65,
+        grade: null,
+        'middle-school': '\"W3C\" Middle School',
+        skills: ['JavaScript', 'Java', 'Python', 'Lisp']
+    };
+
+    console.log(JSON.stringify(xiaoming, null, '  '));*/
+
+    /*function Student(name) {
+        this.name = name;
+        this.hello = function () {
+            alert('Hello, ' + this.name + '!');
+        }
+    }
+
+    var xiaoming = new Student('小明');
+    xiaoming.name; // '小明'
+    xiaoming.hello(); // Hello, 小明!
+
+    console.log(xiaoming);
+    console.log(Student.prototype);
+    console.log(Object.prototype);*/
+
+
+    /*function Cat(name) {
+        this.name = name;
+    }
+
+    Cat.prototype.say = function () {
+        return 'Hello, ' + this.name + '!';
+    }
+
+    // 测试:
+    var kitty = new Cat('Kitty');
+    var doraemon = new Cat('哆啦A梦');
+    if (kitty && kitty.name === 'Kitty' && kitty.say && typeof kitty.say === 'function' && kitty.say() === 'Hello, Kitty!' && kitty.say === doraemon.say) {
+        alert('测试通过!');
+    } else {
+        alert('测试失败!');
+    }*/
+
+
+    /*function inherits(Child, Parent) {
+        var F = function () {};
+        F.prototype = Parent.prototype;
+        Child.prototype = new F();
+        Child.prototype.constructor = Child;
+    }
+
+
+    function Student(props) {
+        this.name = props.name || 'Unnamed';
+    }
+
+    Student.prototype.hello = function () {
+        alert('Hello, ' + this.name + '!');
+    }
+
+    function PrimaryStudent(props) {
+        Student.call(this, props);
+        console.log(this);
+        this.grade = props.grade || 1;
+    }
+
+    // 实现原型继承链:
+    inherits(PrimaryStudent, Student);
+
+    // 绑定其他方法到PrimaryStudent原型:
+    PrimaryStudent.prototype.getGrade = function () {
+        return this.grade;
+    };*/
+
+    /*// 创建xiaoming:
+    var xiaoming = new PrimaryStudent({
+        name: '小明',
+        grade: 2
+    });
+    xiaoming.name; // '小明'
+    xiaoming.grade; // 2
+
+    // 验证原型:
+    xiaoming.__proto__ === PrimaryStudent.prototype; // true
+    xiaoming.__proto__.__proto__ === Student.prototype; // true
+
+    // 验证继承关系:
+    xiaoming instanceof PrimaryStudent; // true
+    xiaoming instanceof Student; // true*/
+
+    /*class Student {
+     constructor(name) {
+     this.name = name;
+     }
+
+     hello() {
+     alert('Hello, ' + this.name + '!');
+     }
+     }
+
+     var xiaoming = new Student('小明');
+     xiaoming.hello();*/
+
+
+    /*class Animal {
+        constructor(name) {
+            this.name = name;
+        }
+    }
+
+    class Cat extends Animal {
+        constructor(name) {
+            super(name);
+        }
+        say() {
+            alert("hello, "+this.name+"!");
+        }
+    }
+
+    // 测试:
+    var kitty = new Cat('Kitty');
+    var doraemon = new Cat('哆啦A梦');
+    if ((new Cat('x') instanceof Animal) && kitty && kitty.name === 'Kitty' && kitty.say && typeof kitty.say === 'function' && kitty.say() === 'Hello, Kitty!' && kitty.say === doraemon.say) {
+        alert('测试通过!');
+    } else {
+        alert('测试失败!');
+    }*/
+
+
+   /* // 选择<p>JavaScript</p>:
+    var js= document.getElementById("test-p").innerHTML;
+
+    // 选择<p>Python</p>,<p>Ruby</p>,<p>Swift</p>:
+    var arr = document.getElementByClassName("c-red c-green").getElementsByTagName('p');
+
+    // 选择<p>Haskell</p>:
+    var haskell =  document.getElementByClassName("c-green").lastElementChild;
+
+    // 测试:
+    if (!js || js.innerText !== 'JavaScript') {
+        alert('选择JavaScript失败!');
+    } else if (!arr || arr.length !== 3 || !arr[0] || !arr[1] || !arr[2] || arr[0].innerText !== 'Python' || arr[1].innerText !== 'Ruby' || arr[2].innerText !== 'Swift') {
+        alert('选择Python,Ruby,Swift失败!');
+    } else if (!haskell || haskell.innerText !== 'Haskell') {
+        alert('选择Haskell失败!');
+    } else {
+        alert('测试通过!');
+    }*/
+
+    var arr =[];
+    var list = document.getElementById('test-list');
+    console.log(list);
+    for(var i = 0;i <list.children.length;i++) {
+        var c= list.children[i];
+        alert(c);
+        arr.push(c.innerHTML);
+    }
+    alert(arr);
+
+
+
+
+
+
+</script>
+
+<!--
+&lt;!&ndash; HTML结构 &ndash;&gt;
+<div id="test-div">
+    <div class="c-red">
+        <p id="test-p">JavaScript</p>
+        <p>Java</p>
+    </div>
+    <div class="c-red c-green">
+        <p>Python</p>
+        <p>Ruby</p>
+        <p>Swift</p>
+    </div>
+    <div class="c-green">
+        <p>Scheme</p>
+        <p>Haskell</p>
+    </div>
+</div>
+-->
+
+<!-- HTML结构 -->
+<ol id="test-list">
+    <li class="lang">Scheme</li>
+    <li class="lang">JavaScript</li>
+    <li class="lang">Python</li>
+    <li class="lang">Ruby</li>
+    <li class="lang">Haskell</li>
+</ol>
+
+</body>
+</html>
